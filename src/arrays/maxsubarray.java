@@ -71,9 +71,7 @@ public class maxsubarray {
         int max = arr[0];
         for(int i = 1 ; i < n ; i++){
             currsum = Math.max(arr[i], currsum + arr[i]); // we are checking whether should we continue the prev sub array sum or the element alone is greater than the previous sum to start a new sub array
-            if(currsum > max){
-                max = currsum; // checking which is max
-            }
+            max = Math.max(max,currsum);
         }
         return max;
     }
