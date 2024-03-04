@@ -7,25 +7,19 @@ public class MaxConsecutiveOnes {
         System.out.println(ans);
 
     }
-    public static int maxconsecutiveones(int[] arr){
-        System.out.println(arr.length);
+    public static int maxconsecutiveones(int[] arr) {
         int current = 0;
-        int max = 0 ;
-        for(int i = 0 ; i < arr.length;i++){
-            if(arr[i] == 1){
-                current = current + 1 ;
-            }
-            else if(current > max){
-                System.out.println("current sum " + current);
-                System.out.println("max sum " + max);
-                System.out.println(i);
-                max = current;
-                current = 0 ;
+        int max = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 1) {
+                current++;
+            } else {
+                max = Math.max(max, current);
+                current = 0;
             }
         }
-        if(current > max){
-            max = current;
-        }
+        max = Math.max(max, current);
         return max;
     }
+
 }
