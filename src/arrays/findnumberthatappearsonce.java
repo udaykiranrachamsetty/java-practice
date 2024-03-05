@@ -9,6 +9,8 @@ public class findnumberthatappearsonce {
         int ans = findnumber(arr);
         System.out.println(ans);
     }
+
+
     public static int findnumber(int[] arr){
         Map<Integer,Integer> map = new HashMap<>();
         int ans = -1;
